@@ -1,15 +1,41 @@
 /* Este es mi archivos de estilos general del aplicativo web */
+
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
 
+/* GRID PARA LA ESTRUCTURA GENERAL */
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     line-height: 1.5;
     background: #f4f4f4;
+
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+        "aside"
+        "footer";
+}
+
+.header {
+    grid-area: header;
+}
+
+.main {
+    grid-area: main;
+}
+
+.aside {
+    grid-area: aside;
+}
+
+.footer {
+    grid-area: footer;
 }
 
 
@@ -89,6 +115,7 @@ body {
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 
@@ -99,9 +126,6 @@ body {
     height: 180px;
     overflow: hidden;
 }
-
-
-/* IMAGEN DE LA CARD */
 
 .card__image {
     display: block;
@@ -125,36 +149,7 @@ body {
 }
 
 
-/* ASIDE */
-
-.aside {
-    background: white;
-    border: 1px solid #ddd;
-    padding: 16px;
-    margin-top: 16px;
-    border-radius: 6px;
-}
-
-
-/* FOOTER */
-
-.footer {
-    background: #333;
-    color: white;
-    margin-top: 32px;
-}
-
-.footer p {
-    text-align: center;
-    padding: 20px 0;
-    margin: 0;
-}
-
 /* BADGE EN LAS CARDS */
-
-.card {
-    position: relative;
-}
 
 .card__badge {
     position: absolute;
@@ -172,14 +167,36 @@ body {
 }
 
 
-/* FORMULARIO */
+/* ASIDE */
+
+.aside {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 16px;
+    margin-top: 16px;
+    border-radius: 6px;
+}
+
+
+/* FLEXBOX EN SECCIÓN CONTACTO */
+
+.contact__layout {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin-top: 16px;
+}
+
+.contact__info {
+    flex: 1;
+}
 
 .form {
+    flex: 1;
     background: white;
     border: 1px solid #ddd;
     padding: 16px;
     border-radius: 6px;
-    margin-top: 16px;
 }
 
 .form__group {
@@ -210,6 +227,21 @@ body {
 
 .form__submit:hover {
     background: #555;
+}
+
+
+/* FOOTER */
+
+.footer {
+    background: #333;
+    color: white;
+    margin-top: 32px;
+}
+
+.footer p {
+    text-align: center;
+    padding: 20px 0;
+    margin: 0;
 }
 
 
