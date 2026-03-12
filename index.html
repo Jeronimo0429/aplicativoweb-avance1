@@ -2,34 +2,47 @@
 <html lang="es">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Sitio informativo - Colegio</title>
+
     <link rel="stylesheet" href="styles.css">
+
+    <!-- favicon -->
+    <link rel="icon" href="favicon.png" type="image/png">
+
 </head>
 
 <body>
 
-    <header class="header">
+    <header class="header" id="header">
 
         <div class="container header__inner">
 
-            <h1 class="header__title">Portal Informativo Colegio - Ana Julia Holguín</h1>
+            <div class="header__logo-container">
+
+                <img src="favicon.png" alt="Logo colegio" class="header__logo">
+
+                <h1 class="header__title">Portal Informativo Colegio Ana Julia Holguín</h1>
+
+            </div>
 
             <nav class="nav">
 
                 <ul class="nav__list">
 
                     <li class="nav__item">
-                        <a class="nav__link" href="#inicio">Inicio</a>
-                    </li>
-
-                    <li class="nav__item">
-                        <a class="nav__link" href="#noticias">Noticias</a>
+                        <a class="nav__link" href="#anuncios">Anuncios</a>
                     </li>
 
                     <li class="nav__item">
                         <a class="nav__link" href="#contacto">Contacto</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a class="nav__link" href="#anuncios-lateral">Eventos</a>
                     </li>
 
                 </ul>
@@ -41,7 +54,7 @@
     </header>
 
 
-    <main id="inicio" class="main container">
+    <main class="main container">
 
         <section id="noticias">
 
@@ -99,26 +112,26 @@
 
                     <p>
                         Puede comunicarse con la institución mediante el siguiente
-                        formulario. Nuestro equipo responderá a la mayor brevedad posible.
+                        formulario.
                     </p>
 
                 </div>
 
-                <form class="form">
+                <form id="contactForm" class="form">
 
                     <div class="form__group">
                         <label class="form__label">Nombre</label>
-                        <input class="form__input" type="text" required>
+                        <input id="nombre" class="form__input" type="text" required>
                     </div>
 
                     <div class="form__group">
                         <label class="form__label">Email</label>
-                        <input class="form__input" type="email" required>
+                        <input id="email" class="form__input" type="email" required>
                     </div>
 
                     <div class="form__group">
                         <label class="form__label">Mensaje</label>
-                        <textarea class="form__textarea"></textarea>
+                        <textarea id="mensaje" class="form__textarea"></textarea>
                     </div>
 
                     <button class="form__submit">Enviar</button>
@@ -129,14 +142,66 @@
 
         </section>
 
+        <section id="anuncios" class="anuncios">
+
+            <h2 class="section-title">Anuncios importantes</h2>
+
+            <div class="anuncios__grid">
+
+                <div class="anuncio">
+                    <h3>Inscripciones abiertas</h3>
+                    <p>Se encuentran abiertas las inscripciones para el próximo año escolar.</p>
+                </div>
+
+                <div class="anuncio">
+                    <h3>Reunión de padres</h3>
+                    <p>El próximo viernes se realizará reunión general de padres de familia.</p>
+                </div>
+
+                <div class="anuncio">
+                    <h3>Nuevo laboratorio</h3>
+                    <p>El colegio inaugurará su nuevo laboratorio de tecnología.</p>
+                </div>
+
+                <div class="anuncio">
+                    <h3>Torneo deportivo</h3>
+                    <p>Se realizará el torneo intercolegiado de fútbol y baloncesto.</p>
+                </div>
+
+            </div>
+
+        </section>
+
     </main>
 
 
-    <aside class="aside container">
+    <aside id="anuncios-lateral" class="aside container">
 
-        <h2>Anuncios</h2>
+        <h2>Próximos eventos</h2>
 
-        <p>Próximo evento académico el 15 de abril.</p>
+        <div class="eventos">
+
+            <div class="evento">
+                <p class="evento__fecha">15 Abril</p>
+                <p class="evento__titulo">Evento académico institucional</p>
+            </div>
+
+            <div class="evento">
+                <p class="evento__fecha">20 Abril</p>
+                <p class="evento__titulo">Día cultural del colegio</p>
+            </div>
+
+            <div class="evento">
+                <p class="evento__fecha">5 Mayo</p>
+                <p class="evento__titulo">Feria tecnológica estudiantil</p>
+            </div>
+
+            <div class="evento">
+                <p class="evento__fecha">18 Mayo</p>
+                <p class="evento__titulo">Torneo deportivo intercolegiado</p>
+            </div>
+
+        </div>
 
     </aside>
 
@@ -144,13 +209,38 @@
     <footer class="footer">
 
         <div class="container">
-            <p>© 2026 Colegio Ana Julia Holguín</p>
+            <p>Desarrollado por Juan Camilo Mirama Saa - © 2026 Colegio Ana Julia Holguín</p>
         </div>
 
     </footer>
 
 
-    <a href="#inicio" class="btn-top">↑</a>
+    <a href="#header" class="btn-top">↑</a>
+
+
+    <script>
+
+        document.getElementById("contactForm").addEventListener("submit", function (event) {
+
+            event.preventDefault();
+
+            const nombre = document.getElementById("nombre").value;
+            const email = document.getElementById("email").value;
+            const mensaje = document.getElementById("mensaje").value;
+
+            alert(
+                "Información enviada:\n\n" +
+                "Nombre: " + nombre + "\n" +
+                "Email: " + email + "\n" +
+                "Mensaje: " + mensaje
+            );
+
+            document.getElementById("contactForm").reset();
+
+        });
+
+    </script>
+
 
 </body>
 
