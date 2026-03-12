@@ -1,31 +1,116 @@
 /* Este es mi archivos de estilos general del aplicativo web */
-* {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
+    line-height: 1.5;
+    background: #f4f4f4;
 }
 
-header {
+
+/* Contenedor */
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+
+/* HEADER */
+
+.header {
     background: #333;
     color: white;
-    padding: 16px;
 }
 
-nav ul {
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+}
+
+.header__title {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+
+/* NAV BEM */
+
+.nav__list {
     list-style: none;
+    margin: 0;
     padding: 0;
+    display: flex;
+    gap: 20px;
 }
 
-section {
-    padding: 20px;
+.nav__link {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
 }
 
-footer {
+.nav__link:hover {
+    text-decoration: underline;
+}
+
+
+/* TITULOS */
+
+.section-title {
+    margin: 24px 0 12px 0;
+}
+
+
+/* MODELO DE CAJA CARD */
+
+.card {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 16px;
+    border-radius: 6px;
+    margin-bottom: 16px;
+}
+
+.card__title {
+    margin-top: 0;
+}
+
+.card__text {
+    margin: 0;
+    color: #444;
+}
+
+
+/* ASIDE */
+
+.aside {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 16px;
+    margin-top: 16px;
+    border-radius: 6px;
+}
+
+
+/* FOOTER */
+
+.footer {
     background: #333;
     color: white;
+    margin-top: 32px;
+}
+
+.footer p {
     text-align: center;
-    padding: 20px;
+    padding: 20px 0;
+    margin: 0;
 }

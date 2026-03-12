@@ -11,30 +11,47 @@
 <body>
 
     <header class="header">
-        <h1>Portal Informativo Colegio - Ana Julia Holguín</h1>
 
-        <nav class="nav">
-            <ul class="nav__list">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#noticias">Noticias</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
+        <div class="container header__inner">
+
+            <h1 class="header__title">Portal Informativo Colegio - Ana Julia Holguín</h1>
+
+            <nav class="nav">
+
+                <ul class="nav__list">
+
+                    <li class="nav__item">
+                        <a class="nav__link" href="#inicio">Inicio</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a class="nav__link" href="#noticias">Noticias</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a class="nav__link" href="#contacto">Contacto</a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
 
     </header>
 
 
-    <main id="inicio">
+    <main id="inicio" class="main container">
 
         <section id="noticias">
 
-            <h2>Noticias del colegio</h2>
+            <h2 class="section-title">Noticias del colegio</h2>
 
             <article class="card">
 
-                <h3>Feria de la ciencia</h3>
+                <h3 class="card__title">Feria de la ciencia</h3>
 
-                <p>
+                <p class="card__text">
                     Los estudiantes participarán en la feria anual de ciencia
                     presentando proyectos de tecnología e innovación.
                 </p>
@@ -46,7 +63,7 @@
 
         <section id="contacto">
 
-            <h2>Contacto</h2>
+            <h2 class="section-title">Contacto</h2>
 
             <p>Puede comunicarse con la institución mediante este formulario.</p>
 
@@ -55,7 +72,7 @@
     </main>
 
 
-    <aside>
+    <aside class="aside container">
 
         <h2>Anuncios</h2>
 
@@ -64,9 +81,13 @@
     </aside>
 
 
-    <footer>
+    <footer class="footer">
 
-        <p>© 2026 Colegio Ana Julia Holguín</p>
+        <div class="container">
+
+            <p>© 2026 Colegio Ana Julia Holguín</p>
+
+        </div>
 
     </footer>
 
