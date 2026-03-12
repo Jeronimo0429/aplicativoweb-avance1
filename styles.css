@@ -149,3 +149,84 @@ body {
     padding: 20px 0;
     margin: 0;
 }
+
+/* BADGE EN LAS CARDS */
+
+.card {
+    position: relative;
+}
+
+.card__badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #333;
+    color: white;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.card__badge--nuevo {
+    background: #ff0032;
+}
+
+
+/* FORMULARIO */
+
+.form {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 16px;
+    border-radius: 6px;
+    margin-top: 16px;
+}
+
+.form__group {
+    margin-bottom: 14px;
+}
+
+.form__label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.form__input,
+.form__textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form__submit {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form__submit:hover {
+    background: #555;
+}
+
+
+/* BOTON FLOTANTE */
+
+.btn-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #ff0032;
+    color: white;
+    padding: 10px 14px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-top:hover {
+    background: #cc0028;
+}

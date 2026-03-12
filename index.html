@@ -51,6 +51,8 @@
 
                 <article class="card">
 
+                    <span class="card__badge card__badge--nuevo">Nuevo</span>
+
                     <div class="card__image-container">
                         <img class="card__image" src="imagen1.jpg" alt="Imagen del colegio">
                     </div>
@@ -66,6 +68,8 @@
 
 
                 <article class="card">
+
+                    <span class="card__badge">Evento</span>
 
                     <div class="card__image-container">
                         <img class="card__image" src="imagen2.jpg" alt="Imagen del colegio">
@@ -89,7 +93,26 @@
 
             <h2 class="section-title">Contacto</h2>
 
-            <p>Puede comunicarse con la institución mediante este formulario.</p>
+            <form class="form">
+
+                <div class="form__group">
+                    <label class="form__label">Nombre</label>
+                    <input class="form__input" type="text" required>
+                </div>
+
+                <div class="form__group">
+                    <label class="form__label">Email</label>
+                    <input class="form__input" type="email" required>
+                </div>
+
+                <div class="form__group">
+                    <label class="form__label">Mensaje</label>
+                    <textarea class="form__textarea"></textarea>
+                </div>
+
+                <button class="form__submit">Enviar</button>
+
+            </form>
 
         </section>
 
@@ -108,12 +131,13 @@
     <footer class="footer">
 
         <div class="container">
-
             <p>© 2026 Colegio Ana Julia Holguín</p>
-
         </div>
 
     </footer>
+
+
+    <a href="#inicio" class="btn-top">↑</a>
 
 </body>
 
