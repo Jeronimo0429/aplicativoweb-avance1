@@ -70,21 +70,56 @@ body {
 }
 
 
+/* GRID PARA LA SECCIÓN DE CARDS */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+
 /* MODELO DE CAJA CARD */
 
 .card {
     background: white;
     border: 1px solid #ddd;
-    padding: 16px;
     border-radius: 6px;
-    margin-bottom: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
+
+/* CONTENEDOR DE IMAGEN DE LA CARD */
+
+.card__image-container {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+}
+
+
+/* IMAGEN DE LA CARD */
+
+.card__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* CONTENIDO DE LA CARD */
+
 .card__title {
-    margin-top: 0;
+    padding: 10px 12px 0 12px;
+    margin: 0;
 }
 
 .card__text {
+    padding: 8px 12px 12px 12px;
     margin: 0;
     color: #444;
 }
